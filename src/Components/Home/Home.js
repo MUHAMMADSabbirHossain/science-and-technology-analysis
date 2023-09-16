@@ -30,8 +30,8 @@ const Home = () => {
                     <Link to="..." className='text-white text-2xl font-bold bg-gray-700 p-4 rounded'>Live demo</Link>
                 </div>
             </div>
-            <div>
-                <h2>Customer Reviews({ })</h2>
+            <div className='mt-20'>
+                <h2 className='text-2xl font-semibold'>Customer Reviews({dataJson.length})</h2>
                 <div>
 
                     <Link>See All Reviews</Link>
