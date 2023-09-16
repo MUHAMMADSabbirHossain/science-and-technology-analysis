@@ -8,7 +8,7 @@ const Reviews = () => {
     console.log(dataJson);
     return (
         <div>
-            <h1 className='text-6xl'>What our customers say!</h1>
+            <h1 className='text-6xl text-gray-700 font-semibold'>What our customers say!</h1>
             <div className='p-20 md:grid md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 2xl:grid-cols-6 gap-10'>
                 {
                     dataJson.map(review => <Review review={review}></Review>)
