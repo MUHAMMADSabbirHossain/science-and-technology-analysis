@@ -8,6 +8,7 @@ const Header = () => {
             <nav className='sm:flex justify-center'>
                 <CustomLink className='p-1 m-1 text-lg' to="/">HOME</CustomLink>
                 <CustomLink className='p-1 m-1 text-lg' to="/reviews">REVIEWS</CustomLink>
+                <CustomLink className='p-1 m-1 text-lg' to="/dashboard">DASHBOARD</CustomLink>
 
             </nav>
         </div>
