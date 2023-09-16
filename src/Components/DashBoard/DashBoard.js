@@ -1,6 +1,6 @@
 import React from 'react';
 import "./DashBoard.css";
-import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, LineChart, Pie, PieChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import useDataJson from '../Hooks/useDataJson';
 
 const DashBoard = () => {
@@ -33,8 +33,41 @@ const DashBoard = () => {
             </div>
 
             <div>
-
+                <ComposedChart width={400} height={300} data={dataJson}>
+                    <XAxis dataKey="month"></XAxis>
+                    <YAxis dataKey="revenue"></YAxis>
+                    <Tooltip></Tooltip>
+                    <Legend></Legend>
+                    <CartesianGrid stroke='#f5f5f5'></CartesianGrid>
+                    <Area type="monotone" dataKey="revenue" fill="#8884d8" stroke="#8884d8"></Area>
+                    <Bar dataKey="revenue" barSize={20} fill="#413ea0" />
+                    <Line type="monotone" dataKey="sell" stroke="#ff7300" />
+                </ComposedChart>
             </div>
+
+            <div>
+                <PieChart width={400} height={300}>
+                    <Pie data={dataJson} dataKey="revenue" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" ></Pie>
+                    <Pie data={dataJson} dataKey="investment" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label></Pie>
+                    <Tooltip></Tooltip>
+                </PieChart>
+            </div>
+
+            <div>
+                <ResponsiveContainer width={700} height="80%">
+                    <AreaChart data={dataJson}
+                        margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
+                        <XAxis dataKey="month" />
+                        <YAxis />
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <Tooltip />
+                        <ReferenceLine x="May" stroke="green" label="Min PAGE" />
+                        <ReferenceLine y={40000} label="Max" stroke="red" strokeDasharray="3 3" />
+                        <Area type="monotone" dataKey="revenue" stroke="#8884d8" fill="#8884d8" />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </div>
+
         </section>
     );
 };
