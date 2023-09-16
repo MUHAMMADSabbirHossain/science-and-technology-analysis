@@ -2,7 +2,6 @@ import React from 'react';
 import "./Home.css";
 import vision from "../Images/vision.png";
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from "react"
 import useDataJson from '../Hooks/useDataJson';
 import Review from '../Review/Review';
 
@@ -10,15 +9,8 @@ import Review from '../Review/Review';
 
 
 const Home = () => {
-
-    // const [dataJson, setDataJson] = useState([]);
-    // useEffect(() => {
-    //     fetch("data.json")
-    //         .then(res => res.json())
-    //         .then(data => console.log(data));
-    // }, []);
-
     const [dataJson, setDataJson] = useDataJson();
+
     return (
         <section>
             <div className='md:flex flex-row-reverse'>
@@ -34,7 +26,7 @@ const Home = () => {
             <div className='mt-20'>
                 <h2 className='text-2xl font-semibold'>Customer Reviews({dataJson.length})</h2>
                 <div className=''>
-                    <div className=''>
+                    <div className='p-20 md:grid md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 2xl:grid-cols-6 gap-10'>
                         {
                             dataJson.map(review => <Review review={review}></Review>)
                         }

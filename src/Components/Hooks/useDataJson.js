@@ -8,7 +8,7 @@ const useDataJson = () => {
             .then(data => setDataJson(data));
 
     }, []);
-    console.log(dataJson);
+    // console.log(dataJson);
     return [dataJson, setDataJson];
 };
 
