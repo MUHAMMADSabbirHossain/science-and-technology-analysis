@@ -15,6 +15,10 @@ const Home = () => {
                     <p className='font-semibold my-10'>Apple Vision Pro: Elevating Apple device camera capabilities through AI-driven enhancements, low-light performance, AR integration, and real-time object recognition.</p>
                     <Link to="..." className='text-white text-2xl font-bold bg-gray-700 p-4 rounded'>Live demo</Link>
                 </div>
+
+                <div>
+
+                </div>
             </div>
         </section>
     );
