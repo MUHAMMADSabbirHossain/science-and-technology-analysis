@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+# Website Name: Science and Technology
+Live website link: 
+### Importent summary:
+1. Html, Css, Tailwind Framework
+2. Js, react, react route, context api, custom link, data load
+3. rechart
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
