@@ -8,10 +8,10 @@ export const CustomLink = ({ children, to, ...props }) => {
 
     return (
         <div>
-            <Link style={{ color: match ? "red" : "black", fontWeight: match ? "bold" : "normal" }} className={match ? "nav-active" : ""} {...props} to={resolved.pathname}>
+            <Link style={{ color: match ? "gray" : "black", fontWeight: match ? "bold" : "normal" }} className={match ? "nav-active" : ""} {...props} to={resolved.pathname}>
                 {children}
             </Link>
-            {match && " (active)"}
+
 
         </div>
     );
