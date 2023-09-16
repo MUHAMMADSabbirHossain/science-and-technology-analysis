@@ -11,17 +11,19 @@ const DashBoard = () => {
     return (
         <section className='p-10 lg:grid lg:grid-cols-2 2xl:grid-cols-4'>
             <div className=''>
+                <h2 className="text-2xl text-gray-600 font-semibold p-6">Month Wise Sell</h2>
                 <LineChart width={400} height={300} data={dataJson}>
-                    <Line type="monotone" dataKey="revenue" stroke='#8884d8'></Line>
+                    <Line type="monotone" dataKey="sell" stroke='#8884d8'></Line>
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="month"></XAxis>
-                    <YAxis dataKey="revenue"></YAxis>
+                    <YAxis dataKey="sell"></YAxis>
                     <Tooltip></Tooltip>
                     <Legend></Legend>
                 </LineChart>
             </div>
 
             <div>
+                <h2 className="text-2xl text-gray-600 font-semibold p-6">Investment VS Revenue</h2>
                 <BarChart width={400} height={300} data={dataJson}>
                     <XAxis dataKey="month"></XAxis>
                     <YAxis dataKey=""></YAxis>
@@ -32,7 +34,7 @@ const DashBoard = () => {
                 </BarChart>
             </div>
 
-            <div>
+            <div className="text-2xl text-gray-600 font-semibold p-6">
                 <ComposedChart width={400} height={300} data={dataJson}>
                     <XAxis dataKey="month"></XAxis>
                     <YAxis dataKey="revenue"></YAxis>
@@ -46,14 +48,15 @@ const DashBoard = () => {
             </div>
 
             <div>
+                <h2 className="text-2xl text-gray-600 font-semibold p-6">Investment VS Revenue</h2>
                 <PieChart width={400} height={300}>
-                    <Pie data={dataJson} dataKey="revenue" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" ></Pie>
-                    <Pie data={dataJson} dataKey="investment" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label></Pie>
+                    <Pie data={dataJson} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" ></Pie>
+                    <Pie data={dataJson} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label></Pie>
                     <Tooltip></Tooltip>
                 </PieChart>
             </div>
 
-            <div>
+            <div className="text-2xl text-gray-600 font-semibold p-6">
                 <ResponsiveContainer width={700} height="80%">
                     <AreaChart data={dataJson}
                         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
