@@ -2,8 +2,22 @@ import React from 'react';
 import "./Home.css";
 import vision from "../Images/vision.png";
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react"
+import useDataJson from '../Hooks/useDataJson';
+
+
+
 
 const Home = () => {
+
+    // const [dataJson, setDataJson] = useState([]);
+    // useEffect(() => {
+    //     fetch("data.json")
+    //         .then(res => res.json())
+    //         .then(data => console.log(data));
+    // }, []);
+
+    const [dataJson, setDataJson] = useDataJson();
     return (
         <section>
             <div className='md:flex flex-row-reverse'>
