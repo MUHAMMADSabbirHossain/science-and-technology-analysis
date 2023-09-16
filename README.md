@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 # Website Name: Science and Technology
-Live website link: [https://6505e55ee988622f94e70961--stellular-faun-b75adb.netlify.app/](live webstie link)
+Live website link: [live webstie link](https://6505e55ee988622f94e70961--stellular-faun-b75adb.netlify.app/)
 ### Importent summary:
 1. Html, Css, Tailwind Framework
 2. Js, react, react route, context api, custom link, data load
