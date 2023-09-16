@@ -4,6 +4,7 @@ import vision from "../Images/vision.png";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react"
 import useDataJson from '../Hooks/useDataJson';
+import Review from '../Review/Review';
 
 
 
@@ -33,8 +34,10 @@ const Home = () => {
             <div className='mt-20'>
                 <h2 className='text-2xl font-semibold'>Customer Reviews({dataJson.length})</h2>
                 <div className=''>
-                    <div>
-
+                    <div className=''>
+                        {
+                            dataJson.map(review => <Review review={review}></Review>)
+                        }
                     </div>
 
                     <Link className='bg-gray-600 text-white text-xl font-bold px-8 py-2 rounded-lg hover:bg-gray-950' to='/reviews'>See All Reviews</Link>
