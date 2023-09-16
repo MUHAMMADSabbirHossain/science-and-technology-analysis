@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <section>
             <div className='md:flex flex-row-reverse'>
-                <div className=''>
+                <div className='flex mt-auto'>
                     <img src={vision} alt="vision product" width="" />
                 </div>
                 <div className='px-2 md:basis-4/5'>
@@ -15,9 +15,12 @@ const Home = () => {
                     <p className='font-semibold my-10'>Apple Vision Pro: Elevating Apple device camera capabilities through AI-driven enhancements, low-light performance, AR integration, and real-time object recognition.</p>
                     <Link to="..." className='text-white text-2xl font-bold bg-gray-700 p-4 rounded'>Live demo</Link>
                 </div>
-
+            </div>
+            <div>
+                <h2>Customer Reviews({ })</h2>
                 <div>
 
+                    <Link>See All Reviews</Link>
                 </div>
             </div>
         </section>
